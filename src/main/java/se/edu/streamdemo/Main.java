@@ -12,13 +12,17 @@ public class Main {
         DataManager dataManager = new DataManager("./data/data.txt");
         ArrayList<Task> tasksData = dataManager.loadData();
 
-        System.out.println("Printing all data ...");
-        printAllData(tasksData);
+//        System.out.println("Printing all data ...");
+//        printAllData(tasksData);
+//
+//        System.out.println("Printing deadlines ...");
+//        printDeadlines(tasksData);
 
-        System.out.println("Printing deadlines ...");
-        printDeadlines(tasksData);
+        printDataWithStreams(tasksData);
+        printDeadlinesWithStreams(tasksData);
 
-        System.out.println("Total number of deadlines: " + countDeadlines(tasksData));
+//        System.out.println("Total number of deadlines: " + countDeadlines(tasksData));
+        System.out.println(countDeadlinesWithStream(tasksData));
 
     }
 
